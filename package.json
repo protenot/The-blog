@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack serve",
+    "build-dev": "webpack -c webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "prettier --check . && eslint ..",
     "lint:fix": "prettier --write . && eslint . --fix",
@@ -12,14 +14,25 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^6.8.1",
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "sass": "^1.63.4",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "dev-server": "^0.2.0",
+    "webpack": "^5.87.0",
+    "webpack-cli": "^5.1.4"
   }
 }
