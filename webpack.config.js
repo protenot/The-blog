@@ -1,17 +1,27 @@
 const path = require("path");
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const pages = ["index", "blog", "about", "contacts"];
+
 module.exports = {
   mode: "development",
   target: "web",
   devtool: "source-map",
 
-  entry: {
-    main: path.resolve(__dirname, "./src/index.js"),
-  },
+  entry: pages.reduce((config, page) => {
+    config[page] = `./src/${page}.js`;
+    return config;
+  }, {}),
   output: {
     filename: "[name].[hash-8].js",
     path: path.resolve(__dirname, "./dist"),
     clean: true,
+  },
+
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
   },
   module: {
     rules: [
@@ -40,12 +50,17 @@ module.exports = {
     ],
   },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/index.html"),
-      filename: "index.html",
-    }),
-  ],
+  plugins: [].concat(
+    pages.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          inject: true,
+          template: `./src/${page}.html`,
+          filename: `${page}.html`,
+          chunks: [page],
+        })
+    )
+  ),
 
   devServer: {
     compress: false,
