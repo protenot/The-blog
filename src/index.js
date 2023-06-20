@@ -1,7 +1,8 @@
 import "./style.scss";
 
 let slideIndex = 1;
-
+let prev = document.querySelector(".prev");
+prev.addEventListener("click", plusSlides(-1));
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }

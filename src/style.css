@@ -16,9 +16,10 @@ a {
   padding: 16px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 48px;
   transition: 0.4s ease;
   border-radius: 0 3px 3px 0;
+  z-index: 2;
 }
 
 .next {
@@ -64,6 +65,9 @@ next:hover {
     to{opacity: 1;}
 }*/
 .carusel {
+  position: relative;
+  list-style: none;
+  padding: 0;
   margin: 0 auto;
   align-items: center;
   width: 70%;
@@ -73,6 +77,17 @@ next:hover {
   width: 500px;
   height: auto;
   margin: 5px auto;
+}
+
+.carusel__li {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+}
+
+.carusel__li[data-active] {
+  opacity: 1;
+  z-index: 1;
 }
 
 body {
