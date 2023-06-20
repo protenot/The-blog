@@ -1,5 +1,7 @@
 import "./style.scss";
+import { moveOnClick } from "./moveOnClick.js";
 
+/*
 const moveOnClick = function (n) {
   const activePhoto = document.querySelector("[data-active]");
   const photos = [...document.querySelectorAll(".carusel__li")];
@@ -30,7 +32,7 @@ nextButton.addEventListener("click", function () {
 const prevButton = document.getElementById("button-left");
 prevButton.addEventListener("click", function () {
   moveLeft();
-});
+});*/
 
 /*let slideIndex = 1;
 let prev = document.querySelector(".prev");
