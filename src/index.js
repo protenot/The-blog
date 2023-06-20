@@ -11,7 +11,7 @@ const moveOnClick = function (n) {
   if (newIndex >= photos.length) {
     newIndex = 0;
   }
-  photos[newIndex].dataset.active = tgitrue;
+  photos[newIndex].dataset.active = true;
   delete activePhoto.dataset.active;
 };
 
