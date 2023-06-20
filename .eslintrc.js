@@ -10,6 +10,7 @@ module.exports = {
     ecmaVersion: "latest",
   },
   rules: {
+    "no-unused-vars": "off",
     "no-dupe-keys": "warn",
 
     "no-undef": "off",
