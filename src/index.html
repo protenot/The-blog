@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,11 +33,32 @@
     <main>
       <div class="main">
         <div class="main__img">
-          <img
-            class="main__img_picture"
-            src="img/picture_1.jpg"
-            alt="Naturmort"
-          />
+                
+                <ul class="carusel">
+                    <li clss="carusel__li fade">
+                        <img class="carusel_picture" src="img/picture_1.jpg" alt="Naturmort" />
+                    </li>
+                    <li clss="carusel__li fade">
+                        <img class="carusel_picture" src="img/picture_2.jpg" alt="Naturmort" />
+                    </li>
+                    <li clss="carusel__li fade">
+                        <img class="carusel_picture" src="img/picture_3.jpg" alt="Naturmort" />
+                    </li>
+                    <li clss="carusel__li fade">
+                        <img class="carusel_picture" src="img/picture_4.jpg" alt="Naturmort" />
+                    </li>
+                </ul>
+               
+                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                <a class="next" onclick="plusSlides(1)">&#10095</a>
+            <br>
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+
+            </div>
         </div>
         <section class="main__section">
           <h1 class="main__section_h1">Head of main-section</h1>
@@ -79,4 +101,5 @@
       </nav>
     </footer>
   </body>
+<script type="module" src ="index.js"></script>
 </html>
