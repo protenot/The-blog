@@ -6,6 +6,73 @@ a {
   color: brown;
 }
 
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.4s ease;
+    border-radius: 0 3px 3px 0;
+   
+}
+.next{
+    right: 0;
+    border-radius: 3 px 0 0 3px;
+}
+prev:hover, next:hover{
+    background-color:rgba(0,0,0,0.8) ;
+}
+.dot{
+    cursor: pointer;
+    height: 13px;
+    width:13px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    transition:04s ease ;
+    color: black;
+   
+}
+.active, .dot:hover{
+background-color: #717171;
+}
+/*
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    -o-animation-name: fade;
+    -o-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from{opacity:4}
+    to{opacity: 1;}
+}
+@keyframes fade{
+    from{opacity:4}
+    to{opacity: 1;}
+}*/
+.carusel{ 
+   
+   
+    margin: 0 auto;
+    align-items: center;
+    width:70%;
+   
+.carusel_picture{
+    width: 500px;
+    height: auto;
+    margin: 5px auto;
+  
+   
+}
+
+}
 body {
   background-color: transparent;
   background-image: url("img/background.jpg");
@@ -42,6 +109,7 @@ body {
   color: white;
 }
 .main__img {
+  position: relative;
   margin: 0 auto;
   height: 50vh;
   min-width: 800px;
