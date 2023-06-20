@@ -20,6 +20,7 @@ a {
   transition: 0.4s ease;
   border-radius: 0 3px 3px 0;
   z-index: 2;
+  text-decoration: none;
 }
 
 .next {
@@ -28,8 +29,11 @@ a {
 }
 
 prev:hover,
-next:hover {
+prev:focus,
+next:hover,
+next:focus {
   background-color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
 }
 
 .dot {
