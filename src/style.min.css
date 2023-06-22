@@ -38,9 +38,9 @@ body {
   color: white;
 }
 .main__img {
+  position: relative;
   margin: 0 auto;
   height: 50vh;
-  min-width: 800px;
 }
 .main__img_picture {
   width: 500px;
@@ -58,7 +58,7 @@ body {
 }
 .main__section_article {
   padding: 5px;
-  min-width: 940px;
+  width: 100%;
 }
 .footer {
   display: flex;

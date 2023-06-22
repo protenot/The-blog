@@ -1,82 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="slider.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="slider.js" type="module" defer></script>
+    <script src="index.js" type="module" defer></script>
+
+
     <title>Blog home page</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="header">
-      <div class="header__logo">
-        <img class="header__logo_img" src="img/logo.png" />
-      </div>
+        <div class="header__logo">
+            <img class="header__logo_img" src="img/logo.png" />
+        </div>
 
-      <ul class="header__ul">
-        <li class="header__ul_li">
-          <a href="index.html">HOME</a>
-        </li>
-        <li class="header__ul_li">
-          <a href="blog.html">BLOG</a>
-        </li>
+        <ul class="header__ul">
+            <li class="header__ul_li">
+                <a href="index.html">HOME</a>
+            </li>
+            <li class="header__ul_li">
+                <a href="blog.html">BLOG</a>
+            </li>
 
-        <li class="header__ul_li">
-          <a href="about.html">ABOUT</a>
-        </li>
-        <li class="header__ul_li">
-          <a href="contacts.html">CONTACTS</a>
-        </li>
-      </ul>
+            <li class="header__ul_li">
+                <a href="about.html">ABOUT</a>
+            </li>
+            <li class="header__ul_li">
+                <a href="contacts.html">CONTACTS</a>
+            </li>
+        </ul>
     </header>
     <main>
-      <div class="main">
-        <div class="main__img">
-          <img
-            class="main__img_picture"
-            src="img/picture_1.jpg"
-            alt="Naturmort"
-          />
+        <div class="main">
+            <div class="main__img" id="myCarousel">
+
+                <ul class="carusel">
+                    <li class="carusel__li" data-active>
+                        <img class="carusel_picture" src="img/picture_1.jpg" alt="Naturmort" />
+                    </li>
+                    <li class="carusel__li">
+                        <img class="carusel_picture" src="img/picture_2.jpg" alt="Naturmort" />
+                    </li>
+                    <li class="carusel__li">
+                        <img class="carusel_picture" src="img/picture_3.jpg" alt="Naturmort" />
+                    </li>
+                    <li class="carusel__li">
+                        <img class="carusel_picture" src="img/picture_4.jpg" alt="Naturmort" />
+                    </li>
+                </ul>
+
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+                
+                <script type="module">
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const selector = document.querySelector('#myCarousel');
+                        const myCarousel = new carouselPlugin(selector);
+                        const activePhoto = selector.querySelector("[data-active]");
+    const photos = [...selector.querySelectorAll(".carousel__li")];
+
+
+                        document.querySelector('.prev').addEventListener('click', () => {
+                            myCarousel.moveRight();
+                        })
+                        document.querySelector('.next').addEventListener('click', () => {
+                            myCarousel.moveLeft();
+
+
+                        });
+                    })
+
+
+
+                </script>
+            </div>
+            <section class="main__section">
+                <h1 class="main__section_h1">Head of main-section</h1>
+                <article class="main__section_article">
+                    The significance of these problems is so obvious that the further
+                    development of various forms of activity provides a wide range of
+                    (specialists) participation in the formation of new proposals.
+                    Everyday practice shows that the implementation of the planned tasks
+                    largely determines the creation of a development model. . Similarly,
+                    the constant quantitative growth and the scope of our activity plays
+                    an important role in the formation of the personnel training system,
+                    meets the urgent needs. Similarly, the framework and place of
+                    personnel training entails the process of implementing and
+                    modernizing the personnel training system, meets the urgent needs.
+                    On the other hand, the constant information and propaganda support
+                    of our activities ensures a wide range of (specialists)
+                    participation in the formation of the positions taken by the
+                    participants in relation to the tasks set. Similarly, the constant
+                    quantitative growth and the scope of our activity plays an important
+                    role in the formation of the personnel training system, meets the
+                    urgent needs.
+                </article>
+            </section>
         </div>
-        <section class="main__section">
-          <h1 class="main__section_h1">Head of main-section</h1>
-          <article class="main__section_article">
-            The significance of these problems is so obvious that the further
-            development of various forms of activity provides a wide range of
-            (specialists) participation in the formation of new proposals.
-            Everyday practice shows that the implementation of the planned tasks
-            largely determines the creation of a development model. . Similarly,
-            the constant quantitative growth and the scope of our activity plays
-            an important role in the formation of the personnel training system,
-            meets the urgent needs. Similarly, the framework and place of
-            personnel training entails the process of implementing and
-            modernizing the personnel training system, meets the urgent needs.
-            On the other hand, the constant information and propaganda support
-            of our activities ensures a wide range of (specialists)
-            participation in the formation of the positions taken by the
-            participants in relation to the tasks set. Similarly, the constant
-            quantitative growth and the scope of our activity plays an important
-            role in the formation of the personnel training system, meets the
-            urgent needs.
-          </article>
-        </section>
-      </div>
     </main>
     <footer>
-      <nav class="footer">
-        <p class="footer__nav">
-          <a href="index.html">HOME</a>
-        </p>
-        <p class="footer__nav">
-          <a href="blog.html">BLOG</a>
-        </p>
-        <p class="footer__nav">
-          <a href="about.html">ABOUT</a>
-        </p>
-        <p class="footer__nav">
-          <a href="contacts.html">CONTACTS</a>
-        </p>
-      </nav>
+        <nav class="footer">
+            <p class="footer__nav">
+                <a href="index.html">HOME</a>
+            </p>
+            <p class="footer__nav">
+                <a href="blog.html">BLOG</a>
+            </p>
+            <p class="footer__nav">
+                <a href="about.html">ABOUT</a>
+            </p>
+            <p class="footer__nav">
+                <a href="contacts.html">CONTACTS</a>
+            </p>
+        </nav>
     </footer>
-  </body>
+</body>
+
 </html>

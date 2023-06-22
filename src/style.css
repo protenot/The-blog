@@ -46,9 +46,9 @@ body {
 }
 
 .main__img {
+  position: relative;
   margin: 0 auto;
   height: 50vh;
-  min-width: 800px;
 }
 
 .main__img_picture {
@@ -70,7 +70,7 @@ body {
 
 .main__section_article {
   padding: 5px;
-  min-width: 940px;
+  width: 100%;
 }
 
 .footer {
@@ -208,6 +208,4 @@ body {
 
 .main-contacts__div_form_button {
   grid-column: span 3;
-}
-
-/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
