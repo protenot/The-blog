@@ -1,5 +1,24 @@
 import "./style.scss";
-import { moveOnClick } from "./moveOnClick.js";
+
+import "./slider.scss";
+
+import { carouselPlugin } from "./slider.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selector = document.querySelector("#myCarousel .carusel");
+  const myCarousel = new carouselPlugin(selector);
+
+  document
+    .querySelector(".prev")
+    .addEventListener("click", myCarousel.moveLeft);
+  document
+    .querySelector(".next")
+    .addEventListener("click", myCarousel.moveRight);
+});
+
+//import {carouselPlugin} from "./moveOnClick.js0";
+//carouselPlugin(document.querySelector("#myCarousel"))
+//const myCarousel = carouselPlugin("#myCarousel");
 
 /*
 const moveOnClick = function (n) {

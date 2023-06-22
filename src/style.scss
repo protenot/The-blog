@@ -5,7 +5,7 @@ img {
 a {
   color: brown;
 }
-
+/*
 .prev, .next{
     cursor: pointer;
     position: absolute;
@@ -20,15 +20,17 @@ a {
     border-radius: 0 3px 3px 0;
     z-index: 2;
     text-decoration: none;
+    border: none;
    
 }
 .next{
     right: 0;
     border-radius: 3 px 0 0 3px;
 }
-prev:hover,prev:focus, next:hover, next:focus{
+prev:hover, prev:link, prev:focus, prev:visited, prev:active, next:hover, next:focus{
     background-color:rgba(0,0,0,0.8) ;
     text-decoration: none;
+    border: none;
 }
 .dot{
     cursor: pointer;
@@ -44,22 +46,7 @@ prev:hover,prev:focus, next:hover, next:focus{
 .active, .dot:hover{
 background-color: #717171;
 }
-/*
-.fade{
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    -o-animation-name: fade;
-    -o-animation-duration: 1.5s;
-}
 
-@-webkit-keyframes fade{
-    from{opacity:4}
-    to{opacity: 1;}
-}
-@keyframes fade{
-    from{opacity:4}
-    to{opacity: 1;}
-}*/
 .carusel{ 
     position: relative;
    list-style: none;
@@ -89,7 +76,7 @@ background-color: #717171;
 .carusel__li[data-active]{
     opacity: 1;
     z-index: 1;
-}
+}*/
 body {
   background-color: transparent;
   background-image: url("img/background.jpg");
